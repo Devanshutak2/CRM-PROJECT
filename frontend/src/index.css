@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f5f2;
+  font-family: "Inter", sans-serif;
+  color: #20242b;
+}
+
+/* Odometer-style numeral readout used for every KPI / price / stock count */
+.readout {
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+/* Hairline divider matching the "line" token */
+.hairline {
+  border-color: #e4e2dc;
+}
+
+/* Subtle dial-tick pattern used behind the dashboard gauge */
+.tick-bg {
+  background-image: radial-gradient(circle, rgba(20, 23, 28, 0.05) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d3cb;
+  border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
